@@ -18,12 +18,14 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
-          src="https://i.pinimg.com/236x/1e/3f/58/1e3f587572a7a7b20bbf1828595a1786--holiday-party-themes-holiday-gift-guide.jpg"
+          src="https://media.licdn.com/dms/image/C4D03AQHgVqe3W_raFw/profile-displayphoto-shrink_800_800/0/1651144485469?e=2147483647&v=beta&t=be5eDyf_8NbxO9-41T1Aws6t-X2pA_9dFDJB9R3BIEs"
           alt=""
         />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate qui
-          necessitatibus nostrum illum reprehenderit.
+        i'm samadou Ouro-agorouko. <br />   I'm a Junior Software Engineer <br /> and currently Software Developer intern at "Afroculture & Médias". <br />
+I'm passionate about innovation and cutting-edge technology.
+
+
         </p>
       </div>
       <div className="sidebarItem">
