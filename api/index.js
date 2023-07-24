@@ -8,7 +8,9 @@ const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
+const cors = require('cors');
 
+app.use(cors());
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
@@ -40,6 +42,8 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-app.listen("4000", () => {
+
+if(process.env.API_PORT) {
+  app.listen(process.env.API_PORT);
   console.log("Backend is running.");
-});
+};
