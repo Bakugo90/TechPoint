@@ -47,3 +47,5 @@ if(process.env.API_PORT) {
   app.listen(process.env.API_PORT);
   console.log("Backend is running.");
 };
+
+module.exports = app;
