@@ -38,7 +38,7 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 });
 
 //GET ALL POSTS
-router.get("/", async (req, res) => {
+app.get("/", async (req, res) => {
   const username = req.query.user;
   const catName = req.query.cat;
   try {
