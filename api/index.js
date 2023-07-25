@@ -37,8 +37,11 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
-//GET ALL POSTS
-app.get("/", async (req, res) => {
+/*
+
+*/
+
+get("/", async (req, res) => {
   const username = req.query.user;
   const catName = req.query.cat;
   try {
@@ -60,16 +63,14 @@ app.get("/", async (req, res) => {
   }
 });
 
+// app.use("/api/auth", authRoute);
+// app.use("/api/users", userRoute);
+// app.use("/api/posts", postRoute);
+// app.use("/api/categories", categoryRoute);
 
-app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute);
-app.use("/api/posts", postRoute);
-app.use("/api/categories", categoryRoute);
 
-
-if(process.env.API_PORT) {
-  app.listen(process.env.API_PORT);
+app.listen(process.env.API_PORT || 5000, () => {
   console.log("Backend is running.");
-};
+});
 
 module.exports = app;
